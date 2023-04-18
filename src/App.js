@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { API_KEY } from './config.js';
+// import { API_KEY } from './config.js';
 
 const Chat = () => {
   const [inputValue, setInputValue] = useState('');
@@ -24,7 +24,7 @@ const Chat = () => {
       {
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${API_KEY}`,
+          "Authorization": `Bearer ${process.env.APIKEY}`,
         },
       }
     );
